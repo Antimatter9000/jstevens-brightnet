@@ -40,45 +40,6 @@ function getChartData(data) {
 const Content = () => {
     const { data } = useContext(AppState);
     const [ chartData, setChartData ] = useState(getChartData(data));
-    // const canvasRef = useCallback(node => {
-    //     console.log('node:', node, data);
-    //     if (node && data.school_types) {
-    //         const ctx = node.getContext('2d');
-    //         const dataArray = Object.entries(data.school_types)
-    //             .map(([key, value]) => value);
-    //         console.log(dataArray);
-    //         const chart = new Chart(ctx, {
-    //             type: 'pie',
-    //             data: {
-    //                 labels: ['red', 'green', 'blue', 'yellow'],
-    //                 datasets: [{
-    //                     data: dataArray,
-    //                     backgroundColor: [
-    //                         "#878BB6", 
-    //                         "#4ACAB4", 
-    //                         "#FF8153", 
-    //                         "#FFEA88"
-    //                     ] 
-    //                 }]
-    //             }
-    //         });
-    //         console.log('I MADE PIE', chart);
-    //     } else {
-    //         console.log('I want my pie');
-    //     }
-    // }, [data.school_types]);
-
-    // useEffect(() => {
-    //     console.log('canvasref:', canvasRef);
-    //     if (canvasRef.current) {
-    //         const ctx = canvasRef.current.getContect('2d');
-    //         console.log(Chart);
-    //         const chart = new Chart(ctx, {
-    //             type: 'pie',
-    //             data: data.school_types
-    //         });
-    //     }
-    // }, [canvasRef.current])
 
     useEffect(() => {
         setChartData(getChartData(data));
@@ -89,6 +50,7 @@ const Content = () => {
           className="main-content">
             <div data-testid="chart-card"
               className="card">
+                <h3>School Type</h3>
                 {data.total ? (
                     <Pie data={chartData || {}}
                       width={300}
