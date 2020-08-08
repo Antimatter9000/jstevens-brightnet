@@ -48,20 +48,23 @@ const Content = () => {
     return (
         <section data-testid="content"
           className="main-content">
-            <div data-testid="chart-card"
-              className="card">
-                <h3>School Type</h3>
-                {data.total ? (
-                    <Pie data={chartData || {}}
-                      width={300}
-                      height={300}
-                      options={{
-                          legend: {
-                              position: 'bottom',
-                              align: 'start',
-                              boxWidth: 100
-                          }
-                      }} />
+            <div className="card">
+                <h3 data-testid="chart-card-title">
+                    School Type
+                </h3>
+                {chartData ? (
+                    <div data-testid="chart">
+                        <Pie data={chartData || {}}
+                          width={300}
+                          height={300}
+                          options={{
+                              legend: {
+                                  position: 'bottom',
+                                  align: 'start',
+                                  boxWidth: 100
+                              }
+                          }} />
+                    </div>
                 ) : (
                     <p>No content to display</p>
                 )}

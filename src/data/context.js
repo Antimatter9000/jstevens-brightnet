@@ -1,9 +1,9 @@
 import { createContext } from 'react';
+import { emptyData } from './testData';
 
 const AppState = createContext({
-    gender: 'All',
-    setGender: () => {},
-    data: {},
-    setData: () => {}
+    gendersSelected: [],
+    updateGendersSelected: () => {},
+    data: emptyData
 });
 export default AppState;

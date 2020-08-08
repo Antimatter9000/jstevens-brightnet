@@ -2,6 +2,8 @@ import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import { App } from '../';
 
+jest.mock('src/ui/components/content/Content');
+
 
 afterEach(cleanup);
 

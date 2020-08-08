@@ -6,12 +6,12 @@ export default ({ value }) => {
     const { gendersSelected } = useContext(AppState);
 
     return (
-        <label>
+        <label data-testid="gender-filter-checkbox">
             {value}
-            <input data-testid="gender-filter-radio"
+            <input
               type="checkbox"
               value={value}
-              defaultChecked={gendersSelected.includes(value)} />
+              defaultChecked={gendersSelected?.includes(value)} />
         </label>
     );
 }

@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack",
     "dev": "webpack-dev-server",
-    "test": "jest --watchAll"
+    "test": "jest --watchAll --collectCoverage"
   },
   "author": "Jonathan Stevens",
   "license": "ISC",
@@ -24,6 +24,7 @@
     "@babel/plugin-proposal-optional-chaining": "^7.11.0",
     "@babel/preset-env": "^7.11.0",
     "@babel/preset-react": "^7.10.4",
+
     "@testing-library/jest-dom": "^5.11.2",
     "@testing-library/react": "^10.4.8",
     "babel-loader": "^8.1.0",

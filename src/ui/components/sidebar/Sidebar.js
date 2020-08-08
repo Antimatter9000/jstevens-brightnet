@@ -23,7 +23,8 @@ const Sidebar = () => {
             </button>
             <form onChange={e => updateGendersSelected(e.target.value)}>
                 <fieldset>
-                    <button className="gender-options-toggle"
+                    <button data-testid="gender-options-toggle" 
+                      className="gender-options-toggle"
                       onClick={e => {
                         e.preventDefault();
                         setOptionsShown(!optionsShown);

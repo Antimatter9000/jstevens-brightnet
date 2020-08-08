@@ -2,10 +2,12 @@ import React from 'react';
 import { render, cleanup, waitFor } from '@testing-library/react';
 import { Header } from '../';
 
+jest.mock('src/data/context');
+
 
 afterEach(cleanup);
 
-describe.skip('When the header loads with no context', () => {
+describe.only('When the header loads with no context', () => {
     it('displays the logo', () => {
         const { getByTestId } = render(<Header />);
         expect(getByTestId('student-icon')).toBeTruthy();
