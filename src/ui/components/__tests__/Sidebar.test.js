@@ -47,10 +47,9 @@ describe('When the sidebar loads with context', () => {
         expect(_getByText('Female').querySelector('input')).not.toBeChecked();
     });
 
-    it.skip('sets the gender when the checkbox is clicked', () => {
+    it('sets the gender when the checkbox is clicked', async () => {
         expect.assertions(1);
-        fireEvent.click(_getByText('Female'), () => {
-            expect(updateGendersSelected).toBeCalledTimes(1);
-        });
+        await fireEvent.click(_getByText('Female'));
+        expect(updateGendersSelected).toBeCalledTimes(1);
     });
 });
