@@ -1,4 +1,4 @@
-# Jonathan stevens
+# Jonathan Stevens
 ### Bright Network evaluation
 
 App has been deployed to [https://lab.jstevens.digital/jstevens-brightnet](https://lab.jstevens.digital/jstevens-brightnet)

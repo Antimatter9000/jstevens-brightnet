@@ -9,7 +9,7 @@ import { faVenusMars } from '@fortawesome/free-solid-svg-icons';
 const Sidebar = () => {
     const { updateGendersSelected } = useContext(AppState);
     const [ optionsShown, setOptionsShown ] = useState(true);
-    const [ expanded, setExpanded ] = useState(true);
+    const [ expanded, setExpanded ] = useState(false);
 
     return (
         <aside data-testid="sidebar"
